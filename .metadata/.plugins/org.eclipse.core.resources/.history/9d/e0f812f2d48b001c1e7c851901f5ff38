@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<ul>
+<li><a href="balance.jsp">view balace</a>
+<li><a href="deposit.jsp">deposit</a>
+<li><a href="withdraw.jsp">withdraw</a>
+<li><a href="transfer.jsp">tranfer</a>
+</ul>
+</body>
+</html>

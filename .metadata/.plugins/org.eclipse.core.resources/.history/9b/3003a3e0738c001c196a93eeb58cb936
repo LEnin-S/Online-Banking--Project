@@ -1,0 +1,41 @@
+<%@ page import="java.io.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<%if(session.getAttribute("username")==null){
+	response.sendRedirect("Home.html");
+}
+%>
+<% PrintWriter tr=response.getWriter();
+tr.print(session.getAttribute("username"));
+
+%>
+<ul>
+<li><a href="balfunc.jsp">view balace</a>
+<li><a href="deposit.jsp">deposit</a>
+<li><a href="withdraw.jsp">withdraw</a>
+<li><a href="transfer.jsp">tranfer</a>
+<li><a href="trank.jsp">Transcation Details</a>
+<form action="logout"  >
+      <input type="image" img src="logout.png">
+    </form>
+</ul>
+<input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
+<!-- JS -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="http://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" href="alert/dist/sweetalert.css">
+<script type="text/javascript">
+var status=document.getElementById("status").value;
+if(status=="success"){
+	swal("Congrats","Account Created","success");
+}
+</script>
+</body>
+</html>

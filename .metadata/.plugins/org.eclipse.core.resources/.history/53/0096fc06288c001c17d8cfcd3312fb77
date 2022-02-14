@@ -1,0 +1,211 @@
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
+<%@ page import="java.io.*" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   <!-- Font Icon -->
+<link rel="stylesheet"
+href="fonts/material-icon/css/material-design-iconic-font.min.css">
+  <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+<script type="application/ld+json">{
+	
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="welcome">
+    <meta property="og:type" content="website">
+  </head>
+<!-- Main css -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="u-align-left u-clearfix u-image u-shading u-section-1" src="" id="sec-0bbb" data-image-width="150" data-image-height="103">
+      <div class="u-align-left u-clearfix u-sheet u-sheet-1">
+        <div class="u-expanded-width u-tab-links-align-left u-tabs u-tabs-1">
+          <ul class="u-spacing-10 u-tab-list u-unstyled" role="tablist">
+            <li class="u-tab-item u-tab-item-1" role="presentation">
+              <a class="active u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-1" id="link-tab-14b7" href="balfunc.jsp" role="tab" aria-controls="tab-14b7" aria-selected="true">ACCOUNT</a>
+            </li>
+            <li class="u-tab-item u-tab-item-2" role="presentation">
+              <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-2" id="link-tab-0da5" href="transfer.jsp" role="tab" aria-controls="tab-0da5" aria-selected="false">FUND TRANSFER</a>
+            </li>
+            <li class="u-tab-item" role="presentation">
+              <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-3" id="link-tab-0371" href="deposit.jsp" role="tab" aria-controls="tab-0371" aria-selected="false">DEPOSIT</a>
+            </li>
+            <li class="u-tab-item" role="presentation">
+              <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-4" id="link-tab-2917" href="transaction.jsp" role="tab" aria-controls="tab-2917" aria-selected="false">STATEMENT</a>
+            </li>
+            <li class="u-tab-item u-tab-item-5" role="presentation">
+              <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-5" id="tab-6e5a" href="Withdraw.jsp" role="tab" aria-controls="link-tab-6e5a" aria-selected="false">WITHDRAW</a>
+            </li>
+            <li class="u-tab-item u-tab-item-6" role="presentation">
+
+
+              <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-6" id="link-tab-4f18" href="#tab-4f18" role="tab" aria-controls="tab-4f18" aria-selected="false">CARDS</a>
+            </li>
+          </ul>
+          <div class="u-tab-content">
+            <div class="u-align-left u-container-style u-grey-10 u-tab-active u-tab-pane u-tab-pane-1" id="tab-14b7" role="tabpanel" aria-labelledby="link-tab-14b7">
+              <div class="u-container-layout u-container-layout-1">
+                <div class="u-border-3 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-1"></div>
+                <h5 class="u-text u-text-default u-text-1">ACCOUNT SUMMARY</h5>
+                <div class="u-border-3 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-2"></div>
+                <div class="u-table u-table-responsive u-table-1">
+                  <table class="u-table-entity">
+                    <colgroup>
+                      <col width="32.7%">
+                      <col width="67.3%">
+                    </colgroup>
+                    <tbody class="u-table-body u-table-body-1">
+                      <tr style="height: 46px;">
+                        <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-1">ACCOUNT NO</td>
+                        <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-2">000000</td>
+                      </tr>
+                      <tr style="height: 46px;">
+                        <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-3">IFSC CODE</td>
+                        <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-4">abc000000</td>
+                      </tr>
+                      <tr style="height: 46px;">
+                        <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-5">ACCOUNT BALANCE</td>
+                        <td class="u-border-1 u-border-grey-50 u-border-no-left u-border-no-right u-table-cell u-table-cell-6">0000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="u-align-left u-container-style u-grey-10 u-tab-pane u-tab-pane-2" id="tab-0da5" role="tabpanel" aria-labelledby="link-tab-0da5">
+              <div class="u-container-layout u-valign-top u-container-layout-2">
+                <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-3"></div>
+                <a href="" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-6 u-btn-1">Click Here To Transfer Amount</a>
+              </div>
+            </div>
+            <div class="u-align-left u-container-style u-grey-10 u-tab-pane u-tab-pane-3" id="tab-0371" role="tabpanel" aria-labelledby="link-tab-0371">
+              <div class="u-container-layout u-container-layout-3">
+                <div class="u-absolute-hcenter u-border-3 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-4"></div>
+                <a href="" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-6 u-btn-2">Deposite Fund Here</a>
+              </div>
+            </div>
+            <div class="u-align-left u-container-style u-grey-10 u-tab-pane u-tab-pane-4" id="tab-2917" role="tabpanel" aria-labelledby="link-tab-2917">
+              <div class="u-container-layout u-container-layout-4">
+                <div class="u-absolute-hcenter u-border-3 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-5"></div>
+                <a href="" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-6 u-btn-3">Transaction History</a>
+              </div>
+            </div>
+            <div class="u-align-left u-container-style u-image u-tab-pane u-image-1" id="link-tab-6e5a" role="tabpanel" data-image-width="1280" data-image-height="854">
+              <div class="u-container-layout u-container-layout-5"></div>
+            </div>
+            <div class="u-align-left u-container-style u-image u-tab-pane u-image-2" id="tab-4f18" role="tabpanel" data-image-width="150" data-image-height="99">
+              <div class="u-container-layout u-container-layout-6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<%if(session.getAttribute("username")==null){
+	response.sendRedirect("Home.html");
+}
+%>
+<%
+String username=(String)session.getAttribute("username");
+String password1=(String)session.getAttribute("password");
+tr.print(username);
+String driverName = "com.mysql.jdbc.Driver";
+String connectionUrl = "jdbc:mysql://localhost:3306/";
+String dbName = "banking";
+String userId = "root";
+String password = "dileninban";
+
+try {
+Class.forName(driverName);
+} catch (ClassNotFoundException e) {
+e.printStackTrace();
+}
+
+Connection connection = null;
+Statement statement = null;
+ResultSet resultSet = null;
+%>
+
+
+
+<%
+try{ 
+	//String username = request.getParameter("username");
+//	String accountno=request.getParameter("accountno");
+
+	String pass=request.getParameter("password");
+connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
+statement=connection.createStatement();
+String sql ="SELECT * FROM banking.acc where username='"+username+"'";
+resultSet = statement.executeQuery(sql);
+while(resultSet.next()){
+%>
+<div class="main">
+
+	<!-- Sing in  Form -->
+	<section class="balance-check">
+		<div class="container"> 
+			<div class="balance-content">
+				
+				<div class="balance-form">
+					<h2 class="form-title">Your Balance is : </h2>
+					<form name="form" action="<%= request.getContextPath()%>/welcome.jsp" method="post">
+						<div class="form-group">
+							 <label>User-Name : </label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <%=resultSet.getString("username") %> 
+						</div>
+						<div class="form-group">
+							<label for="accounto">Your Account-No </label>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							 <%=resultSet.getString("accountno") %> 
+						</div>
+							<div class="form-group">
+							<label for="amount">Your Account Balance </label>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <%=resultSet.getString("amount") %> 
+                 
+						</div>
+						<div class="form-group">
+							<input type="checkbox" name="remember-me" id="remember-me"
+								class="agree-term" /> <label for="remember-me"
+								class="label-agree-term"><span><span></span></span>Remember
+								me</label>
+						</div>
+						<div class="form-group form-button">
+							<input type="submit" name="back" id="Back"
+								class="form-submit" value="Back" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div>
+<% 
+}
+
+} catch (Exception e) {
+e.printStackTrace();
+}
+%>
+
+<!-- JS -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

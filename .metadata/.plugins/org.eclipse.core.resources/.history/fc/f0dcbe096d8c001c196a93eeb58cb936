@@ -1,0 +1,60 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="​&nbsp;eBANK, eBANKING">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>welcome</title>
+ 
+<link rel="stylesheet" href="welcome.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+ 
+    
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    
+    
+    <script type="application/ld+json">{
+	
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="welcome">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body u-xl-mode"><header class="u-clearfix u-header u-header" id="sec-c823"><div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-title u-text-1"><span class="u-file-icon u-icon"><img src="images/755195.png" alt=""></span>&nbsp;eBANK
+        </h1>
+        <a href="" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1"> &nbsp;LOGOUT</a>
+        <h3 class="u-text u-text-default u-text-2">WELCOME ABC<span style="font-weight: 700;">
+            <span style="font-size: 1.875rem;">
+              <span style="font-weight: 400;"></span>
+            </span>
+          </span>
+        </h3>
+      </div></header>
+    <section class="u-align-left u-clearfix u-image u-shading u-section-1" src="" id="sec-0bbb" data-image-width="150" data-image-height="103">
+      <div class="u-align-left u-clearfix u-sheet u-sheet-1">
+        <div class="u-expanded-width u-tab-links-align-left u-tabs u-tabs-1">
+          <ul class="u-spacing-10 u-tab-list u-unstyled" role="tablist">
+            <li class="u-tab-item u-tab-item-1" role="presentation">
+              <a class="active u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-1" id="link-tab-14b7" href="balfunc.jsp" role="tab" aria-controls="tab-14b7" aria-selected="true">ACCOUNT</a>
+            </li>
+            <li class="u-tab-item u-tab-item-2" role="presentation">
+              <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-2" id="link-tab-0da5" href="transfer.jsp" role="tab" aria-controls="tab-0da5" aria-selected="false">FUND TRANSFER</a>
+            </li>
+            <li class="u-tab-item" role="presentation">
+              <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-3" id="link-tab-0371" href="deposit.jsp" role="tab" aria-controls="tab-0371" aria-selected="false">DEPOSIT</a>
+            </li>
+            <li class="u-tab-item" role="presentation">
+              <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-4" id="link-tab-2917" href="transaction.jsp" role="tab" aria-controls="tab-2917" aria-selected="false">STATEMENT</a>
+            </li>
+            <li class="u-tab-item u-tab-item-5" role="presentation">
+              <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-5" id="tab-6e5a" href="Withdraw.jsp" role="tab" aria-controls="link-tab-6e5a" aria-selected="false">WITHDRAW</a>
+            </li>
+            <li class="u-tab-item u-tab-item-6" role="presentation">
+              <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-6" id="link-tab-4f18" href="#tab-4f18" role="tab" aria-controls="tab-4f18" aria-selected="false">CARDS</a>
+            </li>
+          </ul>
